@@ -1,7 +1,10 @@
 name: multiple_result_alias
-description: A starting point for Dart libraries or applications.
+description: Aliases for multiple_result package
 version: 0.0.1
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/DIG-/dart-multiple-result-alias
+topics:
+  - result
+  - utility
 
 environment:
   sdk: ^3.0.0

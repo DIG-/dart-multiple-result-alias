@@ -1,39 +1,26 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# multiple_result_alias
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+Aliases for [multiple_result](https://pub.dev/packages/multiple_result) classes.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
+## Reasons
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- Avoid name conflict of `Error` class.
+- Allow short name for common error model (`Result<T>` instead of `Result<T, Exception>`).
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
+1. Use this package as dependency replacement for `multiple_result` package just to hide its classes from autocomplete.
+2. Define your own `Result` class aliases, like:
 ```dart
-const like = 'sample';
+typedef Result<T> = $Result<T, Exception>;
+typedef Success<T> = $Success<T, Exception>;
+typedef Failure<T> = $Error<T, Exception>;
 ```
 
-## Additional information
+## Afterwords
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+This package is not a new implementation. It is a transitive depency for `multiple_result` just to provide aliases.
+
+## License
+
+`multiple_result_alias` is available under the MIT license. See the LICENSE file for more info.
