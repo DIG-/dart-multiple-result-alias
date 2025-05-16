@@ -1,6 +1,6 @@
 name: multiple_result_alias
-description: Aliases for multiple_result package
-version: 0.0.1
+description: Provide aliases for multiple_result package to avoid name conflicts.
+version: 5.1.0
 repository: https://github.com/DIG-/dart-multiple-result-alias
 topics:
   - result
