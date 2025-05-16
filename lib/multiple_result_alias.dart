@@ -3,6 +3,8 @@
 /// More dartdocs go here.
 library;
 
-export 'src/multiple_result_alias_base.dart';
+import 'package:multiple_result/multiple_result.dart';
 
-// TODO: Export any libraries intended for clients of this package.
+typedef $Result<S, E> = Result<S, E>;
+typedef $Success<S, E> = Success<S, E>;
+typedef $Error<S, E> = Error<S, E>;

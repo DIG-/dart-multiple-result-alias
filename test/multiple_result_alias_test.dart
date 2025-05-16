@@ -1,16 +1,19 @@
+import 'package:multiple_result/multiple_result.dart';
 import 'package:multiple_result_alias/multiple_result_alias.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
-    final awesome = Awesome();
-
-    setUp(() {
-      // Additional setup goes here.
+  group('Basic tests', () {
+    test('Expect \$Result', () {
+      expect($Result, Result);
     });
 
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+    test('Expect \$Success', () {
+      expect($Success, Success);
+    });
+
+    test('Expect \$Error', () {
+      expect($Error, Error);
     });
   });
 }
